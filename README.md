@@ -16,12 +16,16 @@ Most "AI personas" are just shallow style prompts. This project aims to build so
 ## Repository Layout
 
 ```text
-advisor-foundry/
+dreamteam/
 ├── advisors/
 │   ├── _template/
 │   └── elon-musk/
 ├── data/
-│   └── source-registry/
+│   ├── source-registry/
+│   ├── corpus/
+│   └── imports/
+├── scripts/
+├── .github/workflows/
 ├── docs/
 └── prompts/
 ```
@@ -34,7 +38,32 @@ advisor-foundry/
 - An evaluation rubric to keep the advisor honest
 - A GitHub-safe ingestion policy
 - A system prompt starter for the advisor
+- A live ingestion pipeline with corpus output
+- Daily GitHub Actions ingestion and auto-commit
 - A template for future advisors
+
+## Daily Ingestion
+
+The repository now runs daily ingestion via GitHub Actions:
+
+- Workflow file: `.github/workflows/daily-ingestion.yml`
+- Schedule: daily UTC cron
+- Action: regenerate `data/corpus/elon-musk/corpus.json` and `summary.json`, then auto-commit changes
+
+Manual local run:
+
+```bash
+python3 -B scripts/ingest_elon_corpus.py
+```
+
+## Importing Social Posts and Podcast Transcripts
+
+Place `.jsonl` files in:
+
+- `data/imports/elon-musk/social/`
+- `data/imports/elon-musk/podcasts/`
+
+The ingestion pipeline will automatically include those rows in the corpus.
 
 ## Operating Principles
 
@@ -52,4 +81,4 @@ advisor-foundry/
 3. Build evaluation prompts that compare answers against known Musk patterns.
 4. Ship a lightweight demo app and public benchmark to make the repo star-worthy.
 
-See [docs/project-thesis.zh-CN.md](/Users/davidooi/Desktop/Codex/advisor-foundry/docs/project-thesis.zh-CN.md), [advisors/elon-musk/persona-spec.zh-CN.md](/Users/davidooi/Desktop/Codex/advisor-foundry/advisors/elon-musk/persona-spec.zh-CN.md), and [advisors/elon-musk/evaluation-rubric.md](/Users/davidooi/Desktop/Codex/advisor-foundry/advisors/elon-musk/evaluation-rubric.md) to continue.
+See `docs/project-thesis.zh-CN.md`, `advisors/elon-musk/persona-spec.zh-CN.md`, and `advisors/elon-musk/evaluation-rubric.md` to continue.

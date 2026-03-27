@@ -1,6 +1,6 @@
 {
   "advisor": "elon-musk",
-  "version": "0.1",
+  "version": "0.2",
   "surfaces": [
     {
       "id": "elon-official-pages",
@@ -33,7 +33,8 @@
       "kind": "sitemap",
       "label": "TED public pages",
       "url": "https://www.ted.com/sitemap.xml",
-      "tags": ["official", "ted", "talks", "primary"]
+      "tags": ["official", "ted", "talks", "primary"],
+      "strict_filter": true
     },
     {
       "id": "elon-google-books",
@@ -50,49 +51,81 @@
       "kind": "rss",
       "label": "TED YouTube uploads",
       "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug",
-      "tags": ["youtube", "ted", "video"]
+      "tags": ["youtube", "ted", "video"],
+      "strict_filter": true
     },
     {
       "id": "lex-podcast-feed",
       "kind": "rss",
       "label": "Lex Fridman podcast feed",
       "url": "https://lexfridman.com/feed/podcast/",
-      "tags": ["podcast", "lex-fridman", "video", "secondary"]
+      "authority": "secondary",
+      "tags": ["podcast", "lex-fridman", "video", "secondary"],
+      "strict_filter": true
     },
     {
       "id": "lex-transcript-feed",
       "kind": "rss",
       "label": "Lex Fridman transcript feed",
       "url": "https://lexfridman.com/category/transcripts/feed/",
-      "tags": ["podcast", "transcript", "lex-fridman", "secondary"]
+      "authority": "secondary",
+      "tags": ["podcast", "transcript", "lex-fridman", "secondary"],
+      "strict_filter": true
     },
     {
       "id": "tesla-youtube-feed",
       "kind": "rss",
       "label": "Tesla YouTube uploads",
-      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCgJFWV3ixqTyXzqD0raM1UQ",
-      "tags": ["youtube", "tesla", "video"]
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAwWgA5gGJrA5iX4t8M6nUg",
+      "tags": ["youtube", "tesla", "video"],
+      "strict_filter": false
     },
     {
       "id": "spacex-youtube-feed",
       "kind": "rss",
       "label": "SpaceX YouTube uploads",
       "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtI0Hodo5o5dUb67FeUjDeA",
-      "tags": ["youtube", "spacex", "video"]
+      "tags": ["youtube", "spacex", "video"],
+      "strict_filter": false
+    },
+    {
+      "id": "search-discovery-layer",
+      "kind": "search_rss",
+      "label": "Search discovery layer for Elon rise/fall materials",
+      "url_template": "https://www.bing.com/search?q={query}&format=rss&setlang=en-US&cc=US",
+      "authority": "secondary",
+      "tags": ["discovery", "search", "secondary"],
+      "strict_filter": true,
+      "queries": [
+        "\"Elon Musk\" interview transcript",
+        "\"Elon Musk\" earnings call transcript",
+        "\"Elon Musk\" biography",
+        "\"Elon Musk\" Tesla Master Plan",
+        "\"Elon Musk\" SpaceX update",
+        "\"Elon Musk\" controversy",
+        "\"Elon Musk\" legal filing",
+        "\"Elon Musk\" acquisition timeline",
+        "\"Elon Musk\" management style",
+        "\"Elon Musk\" podcast transcript"
+      ]
     },
     {
       "id": "social-import-slot",
-      "kind": "import_slot",
+      "kind": "jsonl_import",
       "label": "Elon social post archive import",
-      "notes": "Designed for future import of X/Twitter exports, API pulls, or licensed datasets.",
-      "tags": ["social", "x", "archive"]
+      "path": "data/imports/elon-musk/social",
+      "authority": "mixed",
+      "notes": "Import JSONL rows with url/title/published_at/tags/notes for X archives or licensed social datasets.",
+      "tags": ["social", "x", "archive", "import"]
     },
     {
       "id": "podcast-import-slot",
-      "kind": "import_slot",
+      "kind": "jsonl_import",
       "label": "Podcast transcript import",
-      "notes": "Designed for transcript files, show notes pages, or licensed transcript datasets.",
-      "tags": ["podcast", "transcript", "archive"]
+      "path": "data/imports/elon-musk/podcasts",
+      "authority": "mixed",
+      "notes": "Import JSONL rows with transcript URLs, metadata, and tags from licensed/public transcript sets.",
+      "tags": ["podcast", "transcript", "archive", "import"]
     }
   ]
 }

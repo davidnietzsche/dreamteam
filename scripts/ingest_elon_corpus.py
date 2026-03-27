@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from datetime import datetime, timezone
 from html.parser import HTMLParser
+from pathlib import Path
 
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -168,7 +169,42 @@ def extract_rss_items(xml_text):
                     "published": entry.findtext("{http://www.w3.org/2005/Atom}published", default="").strip()
                 }
             )
+    elif root.tag.lower().endswith("rss"):
+        channel = root.find("channel")
+        if channel is not None:
+            for item in channel.findall("item"):
+                items.append(
+                    {
+                        "loc": (item.findtext("link", default="") or "").strip(),
+                        "title": (item.findtext("title", default="") or "").strip(),
+                        "published": (item.findtext("pubDate", default="") or "").strip(),
+                        "description": (item.findtext("description", default="") or "").strip()
+                    }
+                )
     return items
+
+
+def extract_urls_from_text(text):
+    pattern = re.compile(r"https?://[^\s<>\"]+")
+    urls = []
+    for match in pattern.findall(text):
+        cleaned = match.rstrip(".,);")
+        urls.append(cleaned)
+    return urls
+
+
+def load_jsonl_records(file_path):
+    records = []
+    with open(file_path, "r", encoding="utf-8") as handle:
+        for index, line in enumerate(handle, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                records.append(json.loads(line))
+            except json.JSONDecodeError:
+                print(f"[warn] invalid jsonl at {file_path}:{index}", file=sys.stderr)
+    return records
 
 
 def build_record(url, surface_id, extra=None):
@@ -193,6 +229,7 @@ def build_record(url, surface_id, extra=None):
 def ingest_surface(surface):
     kind = surface["kind"]
     records = []
+    strict_filter = bool(surface.get("strict_filter", False))
 
     if kind == "sitemap":
         items = flatten_sitemap(surface)
@@ -200,7 +237,7 @@ def ingest_surface(surface):
             url = item.get("loc", "").strip()
             if not url:
                 continue
-            if maybe_elon_related(url, ""):
+            if (not strict_filter) or maybe_elon_related(url, ""):
                 records.append(
                     build_record(
                         url,
@@ -218,7 +255,9 @@ def ingest_surface(surface):
         items = extract_rss_items(xml_text)
         for item in items:
             url = item.get("loc", "").strip()
-            if url and maybe_elon_related(url, item.get("title", "")):
+            if not url:
+                continue
+            if (not strict_filter) or maybe_elon_related(url, f"{item.get('title', '')} {item.get('description', '')}"):
                 records.append(
                     build_record(
                         url,
@@ -226,11 +265,50 @@ def ingest_surface(surface):
                         {
                             "title": item.get("title", ""),
                             "published": item.get("published", ""),
-                            "authority": "primary",
+                            "authority": surface.get("authority", "primary"),
                             "tags": surface.get("tags", [])
                         }
                     )
                 )
+
+    elif kind == "search_rss":
+        for query in surface.get("queries", []):
+            encoded = urllib.parse.quote_plus(query)
+            feed_url = surface["url_template"].replace("{query}", encoded)
+            xml_text = fetch_text(feed_url)
+            items = extract_rss_items(xml_text)
+
+            for item in items:
+                # Bing RSS item links often point to bing redirect pages.
+                discovered_urls = extract_urls_from_text(
+                    " ".join(
+                        [
+                            item.get("loc", ""),
+                            item.get("description", ""),
+                            item.get("title", "")
+                        ]
+                    )
+                )
+                if not discovered_urls and item.get("loc"):
+                    discovered_urls = [item["loc"]]
+
+                for discovered in discovered_urls:
+                    if "bing.com" in urllib.parse.urlparse(discovered).netloc.lower():
+                        continue
+                    if strict_filter and not maybe_elon_related(discovered, item.get("title", "")):
+                        continue
+                    records.append(
+                        build_record(
+                            discovered,
+                            surface["id"],
+                            {
+                                "title": item.get("title", "") or discovered,
+                                "published": item.get("published", ""),
+                                "authority": surface.get("authority", "secondary"),
+                                "tags": surface.get("tags", []) + [f"query:{query}"]
+                            }
+                        )
+                    )
 
     elif kind == "manual_list":
         for url in surface.get("urls", []):
@@ -261,6 +339,30 @@ def ingest_surface(surface):
                 "captured_at": now_iso()
             }
         )
+
+    elif kind == "jsonl_import":
+        import_dir = Path(ROOT) / surface["path"]
+        import_dir.mkdir(parents=True, exist_ok=True)
+        files = sorted(import_dir.glob("*.jsonl"))
+        for file_path in files:
+            imported = load_jsonl_records(str(file_path))
+            for item in imported:
+                url = (item.get("url") or "").strip()
+                if not url:
+                    continue
+                records.append(
+                    build_record(
+                        url,
+                        surface["id"],
+                        {
+                            "title": item.get("title", "") or url,
+                            "published": item.get("published_at", ""),
+                            "authority": item.get("authority", surface.get("authority", "secondary")),
+                            "tags": list(set(surface.get("tags", []) + item.get("tags", []))),
+                            "notes": item.get("notes", "")
+                        }
+                    )
+                )
 
     return records
 

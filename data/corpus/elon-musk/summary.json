@@ -1,7 +1,7 @@
 {
   "advisor": "elon-musk",
-  "generated_at": "2026-03-27T07:27:55.987475+00:00",
-  "total_records": 29,
+  "generated_at": "2026-03-27T08:24:24.297304+00:00",
+  "total_records": 510,
   "by_domain_group": {
     "tesla.com": 8,
     "spacex.com": 3,
@@ -11,20 +11,31 @@
     "www.boringcompany.com": 1,
     "simonandschuster.com": 1,
     "google.com": 1,
-    "youtube.com": 7,
-    "import-slot": 2
+    "lexfridman.com": 455,
+    "youtube.com": 15,
+    "www.elon.edu": 8,
+    "connect2.elon.edu": 1,
+    "ontrack.elon.edu": 1,
+    "www.biography.com": 1,
+    "thebiographybytes.com": 1,
+    "biographyhost.com": 1,
+    "www.forbes.com": 1,
+    "atouchofbusiness.com": 1,
+    "en.wikipedia.org": 1,
+    "www.thoughtco.com": 1,
+    "technewsjunkies.com": 1,
+    "mabumbe.com": 1,
+    "www.jagranjosh.com": 1
   },
   "by_authority": {
-    "primary": 25,
-    "secondary": 2,
-    "mixed": 2
+    "primary": 33,
+    "secondary": 477
   },
   "by_source_type": {
     "official_page": 12,
     "talk_or_event_page": 4,
-    "web_page": 4,
-    "video_feed_item": 7,
-    "import_slot": 2
+    "web_page": 479,
+    "video_feed_item": 15
   },
   "failures": [
     {
