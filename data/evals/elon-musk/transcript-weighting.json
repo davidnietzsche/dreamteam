@@ -1,0 +1,16 @@
+{
+  "advisor": "elon-musk",
+  "version": "0.1",
+  "policy": {
+    "description": "Weight long-form reasoning sources higher than short-form posts when generating strategic advice.",
+    "weights": {
+      "official_page": 1.4,
+      "talk_or_event_page": 1.6,
+      "transcript_page": 1.8,
+      "podcast_page": 1.5,
+      "social_post": 0.9,
+      "search_discovery": 0.6
+    },
+    "minimum_long_form_share": 0.25
+  }
+}

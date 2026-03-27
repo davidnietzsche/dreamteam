@@ -27,6 +27,7 @@ jobs:
           python3 -B scripts/import_elon_social_hf.py
           python3 -B scripts/import_elon_social_archives.py
           INGEST_SKIP_SURFACES=tesla-youtube-feed,spacex-youtube-feed,search-discovery-layer,lex-transcript-feed python3 -B scripts/ingest_elon_corpus.py
+          python3 -B scripts/build_readiness_scorecard.py
 
       - name: Commit updates
         run: |
@@ -36,6 +37,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/corpus/elon-musk/corpus.json data/corpus/elon-musk/summary.json
+          git add data/corpus/elon-musk/corpus.json data/corpus/elon-musk/summary.json data/evals/elon-musk/readiness-scorecard.json data/imports/elon-musk/social/hf_social_posts.jsonl data/imports/elon-musk/social/external_archive_posts.jsonl
           git commit -m "chore: daily Elon corpus refresh"
           git push origin HEAD:main

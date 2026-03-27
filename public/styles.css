@@ -246,6 +246,60 @@ h3 {
   gap: 14px;
 }
 
+.readiness-shell {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 16px;
+}
+
+.readiness-main,
+.readiness-item {
+  backdrop-filter: blur(14px);
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.readiness-score {
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 0.95;
+  color: var(--accent-strong);
+}
+
+.readiness-band {
+  margin: 8px 0 4px;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.readiness-note {
+  margin-top: 10px;
+}
+
+.readiness-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.readiness-item p {
+  margin: 0;
+}
+
+.readiness-item .value {
+  font-size: 1.7rem;
+  color: var(--ink);
+}
+
+.readiness-item .label {
+  margin-top: 5px;
+  color: var(--muted);
+}
+
 .timeline-card {
   display: grid;
   grid-template-columns: 110px 1fr;
@@ -321,6 +375,8 @@ h3 {
 @media (max-width: 920px) {
   .hero,
   .dual,
+  .readiness-shell,
+  .readiness-grid,
   .memory-grid,
   .kb-grid,
   .repo-grid {

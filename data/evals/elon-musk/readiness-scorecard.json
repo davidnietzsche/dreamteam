@@ -1,0 +1,34 @@
+{
+  "advisor": "elon-musk",
+  "generated_at": "2026-03-27T17:33:44.756968+00:00",
+  "readiness_score_percent": 43.3,
+  "readiness_band": "low",
+  "components": {
+    "corpus_depth": {
+      "score": 95.8,
+      "records": 23941
+    },
+    "benchmark_coverage": {
+      "score": 100.0,
+      "cases": 120,
+      "target": 120
+    },
+    "contradiction_modes": {
+      "score": 100.0,
+      "modes": 5
+    },
+    "red_team_depth": {
+      "score": 100.0,
+      "checks": 10
+    },
+    "long_form_reasoning_balance": {
+      "score": 12.7,
+      "weighted_share": 3.19,
+      "minimum_share_target": 25.0
+    }
+  },
+  "notes": [
+    "This score measures consultant readiness, not identity equivalence.",
+    "A high score still requires ongoing red-team and scenario validation before high-stakes decisions."
+  ]
+}

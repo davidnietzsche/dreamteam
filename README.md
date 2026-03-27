@@ -48,14 +48,15 @@ The repository now runs daily ingestion via GitHub Actions:
 
 - Workflow file: `.github/workflows/daily-ingestion.yml`
 - Schedule: daily UTC cron
-- Action: regenerate `data/corpus/elon-musk/corpus.json` and `summary.json`, then auto-commit changes
+- Action: run social importers, refresh corpus, rebuild readiness score, then auto-commit changes
 
 Manual local run:
 
 ```bash
 python3 -B scripts/import_elon_social_hf.py
 python3 -B scripts/import_elon_social_archives.py
-python3 -B scripts/ingest_elon_corpus.py
+INGEST_SKIP_SURFACES=tesla-youtube-feed,spacex-youtube-feed,search-discovery-layer,lex-transcript-feed python3 -B scripts/ingest_elon_corpus.py
+python3 -B scripts/build_readiness_scorecard.py
 ```
 
 ## Importing Social Posts and Podcast Transcripts
@@ -73,6 +74,17 @@ By default:
 - `scripts/import_elon_social_archives.py` imports from external JSON archive configs in `data/imports/elon-musk/social/external_archives.json`.
 
 Both write normalized rows to `data/imports/elon-musk/social/*.jsonl`, which are picked up by the ingestion pipeline.
+
+## Consultant Readiness
+
+The repository now includes consultant-readiness assets:
+
+- Decision benchmark bank: `data/evals/elon-musk/decision-benchmarks.json` (120 cases)
+- Contradiction modes: `data/evals/elon-musk/contradiction-modes.json`
+- Red-team checklist: `data/evals/elon-musk/red-team-checklist.json`
+- Transcript weighting policy: `data/evals/elon-musk/transcript-weighting.json`
+- Score builder: `scripts/build_readiness_scorecard.py`
+- Score output: `data/evals/elon-musk/readiness-scorecard.json`
 
 ## Operating Principles
 

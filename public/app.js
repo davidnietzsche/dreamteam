@@ -151,6 +151,10 @@ const demoAnswerStyle = document.getElementById("demo-answer-style");
 const publicList = document.getElementById("public-list");
 const privateList = document.getElementById("private-list");
 const filters = Array.from(document.querySelectorAll(".filter"));
+const readinessScore = document.getElementById("readiness-score");
+const readinessBand = document.getElementById("readiness-band");
+const readinessNote = document.getElementById("readiness-note");
+const readinessGrid = document.getElementById("readiness-grid");
 
 function renderStats() {
   statsGrid.innerHTML = data.stats
@@ -236,6 +240,26 @@ function renderRepoLists() {
   privateList.innerHTML = data.repoPrivate.map((item) => `<li>${item}</li>`).join("");
 }
 
+function renderReadiness(scorecard) {
+  readinessScore.textContent = `${scorecard.readiness_score_percent}%`;
+  readinessBand.textContent = `Band: ${scorecard.readiness_band}`;
+  readinessNote.textContent = (scorecard.notes && scorecard.notes[0]) || "";
+
+  const components = scorecard.components || {};
+  readinessGrid.innerHTML = Object.entries(components)
+    .map(([key, value]) => {
+      const display = value.score !== undefined ? `${value.score}%` : "--";
+      const label = key.replace(/_/g, " ");
+      return `
+        <article class="readiness-item">
+          <p class="value">${display}</p>
+          <p class="label">${label}</p>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 filters.forEach((button) => {
   button.addEventListener("click", () => {
     filters.forEach((item) => item.classList.remove("active"));
@@ -287,3 +311,20 @@ async function hydrateCorpus() {
 }
 
 hydrateCorpus();
+
+async function hydrateReadiness() {
+  try {
+    const response = await fetch("/data/evals/elon-musk/readiness-scorecard.json");
+    if (!response.ok) {
+      throw new Error("Readiness score unavailable");
+    }
+    const scorecard = await response.json();
+    renderReadiness(scorecard);
+  } catch (error) {
+    readinessScore.textContent = "--";
+    readinessBand.textContent = "Band: unavailable";
+    readinessNote.textContent = "Run scripts/build_readiness_scorecard.py to generate a readiness score.";
+  }
+}
+
+hydrateReadiness();

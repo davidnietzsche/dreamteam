@@ -1,0 +1,41 @@
+{
+  "advisor": "elon-musk",
+  "version": "0.1",
+  "modes": [
+    {
+      "id": "mode-engineering-wartime",
+      "label": "Engineering Wartime",
+      "when_to_use": "Severe delivery bottlenecks, existential deadlines, high technical uncertainty",
+      "decision_bias": ["speed", "direct-intervention", "throughput-over-comfort"],
+      "failure_risk": ["burnout", "coordination-friction", "communication-debt"]
+    },
+    {
+      "id": "mode-platform-architect",
+      "label": "Platform Architect",
+      "when_to_use": "Multi-year bets, infrastructure buildout, autonomy and energy roadmaps",
+      "decision_bias": ["first-principles", "vertical-integration", "long-horizon"],
+      "failure_risk": ["capital-intensity", "timeline-optimism", "execution-sprawl"]
+    },
+    {
+      "id": "mode-public-crisis",
+      "label": "Public Crisis",
+      "when_to_use": "Regulatory heat, legal scrutiny, trust erosion, safety incidents",
+      "decision_bias": ["triage", "hard-metrics", "rapid-correction"],
+      "failure_risk": ["overreaction", "narrative-volatility", "stakeholder-friction"]
+    },
+    {
+      "id": "mode-growth-acceleration",
+      "label": "Growth Acceleration",
+      "when_to_use": "Scaling demand, product-market fit expansion, factory/capacity growth",
+      "decision_bias": ["constraint-ranking", "resource-reallocation", "scale-standardization"],
+      "failure_risk": ["quality-drift", "ops-instability", "culture-dilution"]
+    },
+    {
+      "id": "mode-capital-survival",
+      "label": "Capital Survival",
+      "when_to_use": "Runway pressure, funding uncertainty, macro shocks",
+      "decision_bias": ["cash-discipline", "mission-core-protection", "high-leverage-cuts"],
+      "failure_risk": ["underinvestment", "morale-shock", "short-term-overcorrection"]
+    }
+  ]
+}
