@@ -1,0 +1,98 @@
+{
+  "advisor": "elon-musk",
+  "version": "0.1",
+  "surfaces": [
+    {
+      "id": "elon-official-pages",
+      "kind": "manual_list",
+      "label": "Elon official source pages",
+      "tags": ["official", "primary"],
+      "urls": [
+        "https://ir.tesla.com/corporate/elon-musk",
+        "https://www.tesla.com/master-plans",
+        "https://www.tesla.com/blog/secret-tesla-motors-master-plan-just-between-you-and-me",
+        "https://www.tesla.com/master-plan-part-deux",
+        "https://www.tesla.com/blog/master-plan-part-3",
+        "https://www.tesla.com/master-plan-part-4",
+        "https://www.tesla.com/AI",
+        "https://www.tesla.com/autopilot",
+        "https://www.spacex.com/mission/",
+        "https://www.spacex.com/vehicles/starship/",
+        "https://www.spacex.com/launches/",
+        "https://x.ai/company",
+        "https://www.ted.com/speakers/elon_musk",
+        "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring",
+        "https://www.ted.com/talks/elon_musk_a_future_worth_getting_excited_about",
+        "https://www.ted.com/talks/elon_musk_elon_musk_talks_twitter_tesla_and_how_his_brain_works_live_at_ted2022",
+        "https://neuralink.com/",
+        "https://www.boringcompany.com/"
+      ]
+    },
+    {
+      "id": "ted-pages",
+      "kind": "sitemap",
+      "label": "TED public pages",
+      "url": "https://www.ted.com/sitemap.xml",
+      "tags": ["official", "ted", "talks", "primary"]
+    },
+    {
+      "id": "elon-google-books",
+      "kind": "manual_list",
+      "label": "Book metadata pages",
+      "tags": ["books", "secondary"],
+      "urls": [
+        "https://www.simonandschuster.com/books/Elon-Musk/Walter-Isaacson/9781982181284",
+        "https://books.google.com/books/about/Elon_Musk.html?id=Yd99BAAAQBAJ"
+      ]
+    },
+    {
+      "id": "ted-youtube-feed",
+      "kind": "rss",
+      "label": "TED YouTube uploads",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAuUUnT6oDeKwE6v1NGQxug",
+      "tags": ["youtube", "ted", "video"]
+    },
+    {
+      "id": "lex-podcast-feed",
+      "kind": "rss",
+      "label": "Lex Fridman podcast feed",
+      "url": "https://lexfridman.com/feed/podcast/",
+      "tags": ["podcast", "lex-fridman", "video", "secondary"]
+    },
+    {
+      "id": "lex-transcript-feed",
+      "kind": "rss",
+      "label": "Lex Fridman transcript feed",
+      "url": "https://lexfridman.com/category/transcripts/feed/",
+      "tags": ["podcast", "transcript", "lex-fridman", "secondary"]
+    },
+    {
+      "id": "tesla-youtube-feed",
+      "kind": "rss",
+      "label": "Tesla YouTube uploads",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCgJFWV3ixqTyXzqD0raM1UQ",
+      "tags": ["youtube", "tesla", "video"]
+    },
+    {
+      "id": "spacex-youtube-feed",
+      "kind": "rss",
+      "label": "SpaceX YouTube uploads",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtI0Hodo5o5dUb67FeUjDeA",
+      "tags": ["youtube", "spacex", "video"]
+    },
+    {
+      "id": "social-import-slot",
+      "kind": "import_slot",
+      "label": "Elon social post archive import",
+      "notes": "Designed for future import of X/Twitter exports, API pulls, or licensed datasets.",
+      "tags": ["social", "x", "archive"]
+    },
+    {
+      "id": "podcast-import-slot",
+      "kind": "import_slot",
+      "label": "Podcast transcript import",
+      "notes": "Designed for transcript files, show notes pages, or licensed transcript datasets.",
+      "tags": ["podcast", "transcript", "archive"]
+    }
+  ]
+}

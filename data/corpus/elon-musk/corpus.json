@@ -1,0 +1,475 @@
+[
+  {
+    "id": "ir-tesla-com-corporate-elon-musk",
+    "url": "https://ir.tesla.com/corporate/elon-musk",
+    "title": "https://ir.tesla.com/corporate/elon-musk",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.182690+00:00"
+  },
+  {
+    "id": "www-tesla-com-master-plans",
+    "url": "https://www.tesla.com/master-plans",
+    "title": "https://www.tesla.com/master-plans",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183445+00:00"
+  },
+  {
+    "id": "www-tesla-com-blog-secret-tesla-motors-master-plan-just-between-you-and-me",
+    "url": "https://www.tesla.com/blog/secret-tesla-motors-master-plan-just-between-you-and-me",
+    "title": "https://www.tesla.com/blog/secret-tesla-motors-master-plan-just-between-you-and-me",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183459+00:00"
+  },
+  {
+    "id": "www-tesla-com-master-plan-part-deux",
+    "url": "https://www.tesla.com/master-plan-part-deux",
+    "title": "https://www.tesla.com/master-plan-part-deux",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183469+00:00"
+  },
+  {
+    "id": "www-tesla-com-blog-master-plan-part-3",
+    "url": "https://www.tesla.com/blog/master-plan-part-3",
+    "title": "https://www.tesla.com/blog/master-plan-part-3",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183481+00:00"
+  },
+  {
+    "id": "www-tesla-com-master-plan-part-4",
+    "url": "https://www.tesla.com/master-plan-part-4",
+    "title": "https://www.tesla.com/master-plan-part-4",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183492+00:00"
+  },
+  {
+    "id": "www-tesla-com-ai",
+    "url": "https://www.tesla.com/AI",
+    "title": "https://www.tesla.com/AI",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183501+00:00"
+  },
+  {
+    "id": "www-tesla-com-autopilot",
+    "url": "https://www.tesla.com/autopilot",
+    "title": "https://www.tesla.com/autopilot",
+    "surface_id": "elon-official-pages",
+    "domain_group": "tesla.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183511+00:00"
+  },
+  {
+    "id": "www-spacex-com-mission",
+    "url": "https://www.spacex.com/mission/",
+    "title": "https://www.spacex.com/mission/",
+    "surface_id": "elon-official-pages",
+    "domain_group": "spacex.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183521+00:00"
+  },
+  {
+    "id": "www-spacex-com-vehicles-starship",
+    "url": "https://www.spacex.com/vehicles/starship/",
+    "title": "https://www.spacex.com/vehicles/starship/",
+    "surface_id": "elon-official-pages",
+    "domain_group": "spacex.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183531+00:00"
+  },
+  {
+    "id": "www-spacex-com-launches",
+    "url": "https://www.spacex.com/launches/",
+    "title": "https://www.spacex.com/launches/",
+    "surface_id": "elon-official-pages",
+    "domain_group": "spacex.com",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183540+00:00"
+  },
+  {
+    "id": "x-ai-company",
+    "url": "https://x.ai/company",
+    "title": "https://x.ai/company",
+    "surface_id": "elon-official-pages",
+    "domain_group": "x.ai",
+    "source_type": "official_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183549+00:00"
+  },
+  {
+    "id": "www-ted-com-speakers-elon-musk",
+    "url": "https://www.ted.com/speakers/elon_musk",
+    "title": "https://www.ted.com/speakers/elon_musk",
+    "surface_id": "elon-official-pages",
+    "domain_group": "ted.com",
+    "source_type": "talk_or_event_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183559+00:00"
+  },
+  {
+    "id": "www-ted-com-talks-elon-musk-the-future-we-re-building-and-boring",
+    "url": "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring",
+    "title": "https://www.ted.com/talks/elon_musk_the_future_we_re_building_and_boring",
+    "surface_id": "elon-official-pages",
+    "domain_group": "ted.com",
+    "source_type": "talk_or_event_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183570+00:00"
+  },
+  {
+    "id": "www-ted-com-talks-elon-musk-a-future-worth-getting-excited-about",
+    "url": "https://www.ted.com/talks/elon_musk_a_future_worth_getting_excited_about",
+    "title": "https://www.ted.com/talks/elon_musk_a_future_worth_getting_excited_about",
+    "surface_id": "elon-official-pages",
+    "domain_group": "ted.com",
+    "source_type": "talk_or_event_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183580+00:00"
+  },
+  {
+    "id": "www-ted-com-talks-elon-musk-elon-musk-talks-twitter-tesla-and-how-his-brain-works-live-at-ted2022",
+    "url": "https://www.ted.com/talks/elon_musk_elon_musk_talks_twitter_tesla_and_how_his_brain_works_live_at_ted2022",
+    "title": "https://www.ted.com/talks/elon_musk_elon_musk_talks_twitter_tesla_and_how_his_brain_works_live_at_ted2022",
+    "surface_id": "elon-official-pages",
+    "domain_group": "ted.com",
+    "source_type": "talk_or_event_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183592+00:00"
+  },
+  {
+    "id": "neuralink-com",
+    "url": "https://neuralink.com/",
+    "title": "https://neuralink.com/",
+    "surface_id": "elon-official-pages",
+    "domain_group": "neuralink.com",
+    "source_type": "web_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183601+00:00"
+  },
+  {
+    "id": "www-boringcompany-com",
+    "url": "https://www.boringcompany.com/",
+    "title": "https://www.boringcompany.com/",
+    "surface_id": "elon-official-pages",
+    "domain_group": "www.boringcompany.com",
+    "source_type": "web_page",
+    "published_at": "unknown",
+    "authority": "primary",
+    "tags": [
+      "official",
+      "primary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:26.183610+00:00"
+  },
+  {
+    "id": "www-simonandschuster-com-books-elon-musk-walter-isaacson-9781982181284",
+    "url": "https://www.simonandschuster.com/books/Elon-Musk/Walter-Isaacson/9781982181284",
+    "title": "https://www.simonandschuster.com/books/Elon-Musk/Walter-Isaacson/9781982181284",
+    "surface_id": "elon-google-books",
+    "domain_group": "simonandschuster.com",
+    "source_type": "web_page",
+    "published_at": "unknown",
+    "authority": "secondary",
+    "tags": [
+      "books",
+      "secondary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:28.869476+00:00"
+  },
+  {
+    "id": "books-google-com-books-about-elon-musk-html",
+    "url": "https://books.google.com/books/about/Elon_Musk.html?id=Yd99BAAAQBAJ",
+    "title": "https://books.google.com/books/about/Elon_Musk.html?id=Yd99BAAAQBAJ",
+    "surface_id": "elon-google-books",
+    "domain_group": "google.com",
+    "source_type": "web_page",
+    "published_at": "unknown",
+    "authority": "secondary",
+    "tags": [
+      "books",
+      "secondary"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:28.869507+00:00"
+  },
+  {
+    "id": "www-youtube-com-watch",
+    "url": "https://www.youtube.com/watch?v=rcd_SQZDlnk",
+    "title": "Starship | Tenth Flight Test",
+    "surface_id": "spacex-youtube-feed",
+    "domain_group": "youtube.com",
+    "source_type": "video_feed_item",
+    "published_at": "2025-09-29T22:53:54+00:00",
+    "authority": "primary",
+    "tags": [
+      "youtube",
+      "spacex",
+      "video"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:55.987281+00:00"
+  },
+  {
+    "id": "www-youtube-com-watch",
+    "url": "https://www.youtube.com/watch?v=Pn6e1O5bEyA",
+    "title": "Starship | Seventh Flight Test",
+    "surface_id": "spacex-youtube-feed",
+    "domain_group": "youtube.com",
+    "source_type": "video_feed_item",
+    "published_at": "2025-02-25T00:31:19+00:00",
+    "authority": "primary",
+    "tags": [
+      "youtube",
+      "spacex",
+      "video"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:55.987310+00:00"
+  },
+  {
+    "id": "www-youtube-com-watch",
+    "url": "https://www.youtube.com/watch?v=CMGiNKcVSek",
+    "title": "Starship | Sixth Flight Test",
+    "surface_id": "spacex-youtube-feed",
+    "domain_group": "youtube.com",
+    "source_type": "video_feed_item",
+    "published_at": "2025-01-03T16:32:33+00:00",
+    "authority": "primary",
+    "tags": [
+      "youtube",
+      "spacex",
+      "video"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:55.987322+00:00"
+  },
+  {
+    "id": "www-youtube-com-watch",
+    "url": "https://www.youtube.com/watch?v=hI9HQfCAw64",
+    "title": "Starship | Fifth Flight Test",
+    "surface_id": "spacex-youtube-feed",
+    "domain_group": "youtube.com",
+    "source_type": "video_feed_item",
+    "published_at": "2024-11-06T18:33:40+00:00",
+    "authority": "primary",
+    "tags": [
+      "youtube",
+      "spacex",
+      "video"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:55.987334+00:00"
+  },
+  {
+    "id": "www-youtube-com-watch",
+    "url": "https://www.youtube.com/watch?v=j2BdNDTlWbo",
+    "title": "Starship | Fourth Flight Test",
+    "surface_id": "spacex-youtube-feed",
+    "domain_group": "youtube.com",
+    "source_type": "video_feed_item",
+    "published_at": "2024-07-04T16:29:46+00:00",
+    "authority": "primary",
+    "tags": [
+      "youtube",
+      "spacex",
+      "video"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:55.987350+00:00"
+  },
+  {
+    "id": "www-youtube-com-watch",
+    "url": "https://www.youtube.com/watch?v=ApMrILhTulI",
+    "title": "Starship | Third Flight Test",
+    "surface_id": "spacex-youtube-feed",
+    "domain_group": "youtube.com",
+    "source_type": "video_feed_item",
+    "published_at": "2024-04-05T02:14:05+00:00",
+    "authority": "primary",
+    "tags": [
+      "youtube",
+      "spacex",
+      "video"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:55.987363+00:00"
+  },
+  {
+    "id": "www-youtube-com-watch",
+    "url": "https://www.youtube.com/watch?v=97GOcZ08tc4",
+    "title": "Starship | Preparing for Third Flight Test",
+    "surface_id": "spacex-youtube-feed",
+    "domain_group": "youtube.com",
+    "source_type": "video_feed_item",
+    "published_at": "2024-03-13T20:10:36+00:00",
+    "authority": "primary",
+    "tags": [
+      "youtube",
+      "spacex",
+      "video"
+    ],
+    "notes": "",
+    "captured_at": "2026-03-27T07:27:55.987373+00:00"
+  },
+  {
+    "id": "social-import-slot",
+    "url": "",
+    "title": "Elon social post archive import",
+    "surface_id": "social-import-slot",
+    "domain_group": "import-slot",
+    "source_type": "import_slot",
+    "published_at": "n/a",
+    "authority": "mixed",
+    "tags": [
+      "social",
+      "x",
+      "archive"
+    ],
+    "notes": "Designed for future import of X/Twitter exports, API pulls, or licensed datasets.",
+    "captured_at": "2026-03-27T07:27:55.987383+00:00"
+  },
+  {
+    "id": "podcast-import-slot",
+    "url": "",
+    "title": "Podcast transcript import",
+    "surface_id": "podcast-import-slot",
+    "domain_group": "import-slot",
+    "source_type": "import_slot",
+    "published_at": "n/a",
+    "authority": "mixed",
+    "tags": [
+      "podcast",
+      "transcript",
+      "archive"
+    ],
+    "notes": "Designed for transcript files, show notes pages, or licensed transcript datasets.",
+    "captured_at": "2026-03-27T07:27:55.987385+00:00"
+  }
+]

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elon Musk Pixel</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Advisor Foundry / Experimental Build 01</p>
+        <h1>Elon Musk Pixel</h1>
+        <p class="lede">
+          A source-grounded strategic advisor interface that exposes the memory
+          design, training stack, and knowledge base behind an Elon-inspired
+          company advisor.
+        </p>
+        <div class="hero-actions">
+          <a href="#memory" class="button primary">Open Memory Map</a>
+          <a href="#knowledge-base" class="button secondary">Browse Sources</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="signal-card">
+          <span class="signal-label">Mission Core</span>
+          <strong>First principles. Massive ambition. Bottleneck obsession.</strong>
+        </div>
+        <div class="stats-grid" id="stats-grid"></div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section id="memory" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Memory</p>
+          <h2>How Elon Musk Pixel stores judgment</h2>
+          <p>
+            This is not a style clone. The memory system breaks recurring
+            patterns into reusable decision layers.
+          </p>
+        </div>
+        <div class="memory-grid" id="memory-grid"></div>
+      </section>
+
+      <section id="training" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Training Stack</p>
+          <h2>How this advisor is built</h2>
+          <p>
+            The current build is source-grounded rather than a custom model
+            fine-tune. The stack is designed so you can later add ingestion,
+            retrieval, evals, and multi-advisor comparisons.
+          </p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section id="knowledge-base" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Knowledge Base</p>
+          <h2>What the advisor learns from</h2>
+          <p>
+            Each entry is a source object, not raw scraped copyright-heavy text.
+            That keeps the public repo clean and easier to scale.
+          </p>
+        </div>
+        <div class="kb-toolbar">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="primary">Primary</button>
+          <button class="filter" data-filter="secondary">Secondary</button>
+        </div>
+        <div class="kb-grid" id="kb-grid"></div>
+      </section>
+
+      <section id="advisor-output" class="section dual">
+        <div>
+          <div class="section-head left">
+            <p class="eyebrow">Response Logic</p>
+            <h2>Answer structure</h2>
+          </div>
+          <ol class="answer-steps" id="answer-steps"></ol>
+        </div>
+        <div>
+          <div class="section-head left">
+            <p class="eyebrow">Demo Prompt</p>
+            <h2>What a user would ask</h2>
+          </div>
+          <div class="prompt-card">
+            <p class="prompt-label">Scenario</p>
+            <p id="demo-prompt"></p>
+            <p class="prompt-label">Expected advisor posture</p>
+            <p id="demo-answer-style"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="repo" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Repository Shape</p>
+          <h2>What ships to GitHub</h2>
+        </div>
+        <div class="repo-grid">
+          <div class="repo-card">
+            <h3>Public</h3>
+            <ul id="public-list"></ul>
+          </div>
+          <div class="repo-card">
+            <h3>Private or licensed later</h3>
+            <ul id="private-list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell footer">
+      <p>Built locally for rapid iteration. Port: 9999</p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

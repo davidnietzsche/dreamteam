@@ -1,0 +1,9 @@
+{
+  "name": "elon-musk-pixel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local showcase for Elon Musk Pixel",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

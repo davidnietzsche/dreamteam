@@ -1,0 +1,135 @@
+advisor: elon-musk
+version: 0.1
+last_updated: 2026-03-27
+sources:
+  - id: EM-001
+    title: Elon Musk official Tesla biography
+    category: biography
+    source_type: official_company_page
+    authority: primary
+    url: https://ir.tesla.com/corporate/elon-musk
+    published_at: unknown
+    why_it_matters: Baseline public self-positioning across Tesla, SpaceX, Neuralink, and The Boring Company.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-002
+    title: Tesla Master Plans overview
+    category: worldview
+    source_type: official_company_page
+    authority: primary
+    url: https://www.tesla.com/master-plans
+    published_at: unknown
+    why_it_matters: Canonical index for Tesla's mission arc and major written planning documents.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-003
+    title: Master Plan, Part Deux
+    category: strategy
+    source_type: official_company_post
+    authority: primary
+    url: https://www.tesla.com/master-plan-part-deux
+    published_at: 2016-07-20
+    why_it_matters: Clear articulation of staged execution, product laddering, and first-principles commercial logic.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-004
+    title: Master Plan Part 3
+    category: systems_thinking
+    source_type: official_company_post
+    authority: primary
+    url: https://www.tesla.com/blog/master-plan-part-3
+    published_at: 2023-04-05
+    why_it_matters: Reveals how large-scale energy, electrification, and deployment logic are framed.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-005
+    title: Master Plan Part 4
+    category: autonomy_and_abundance
+    source_type: official_company_post
+    authority: primary
+    url: https://www.tesla.com/master-plan-part-4
+    published_at: 2025-09-01
+    why_it_matters: Shows the current Tesla framing around autonomy, abundance, growth, and AI in the physical world.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-006
+    title: SpaceX mission overview
+    category: mission
+    source_type: official_company_page
+    authority: primary
+    url: https://www.spacex.com/mission/
+    published_at: unknown
+    why_it_matters: Captures the multiplanetary framing and long-horizon ambition.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-007
+    title: SpaceX Starship overview
+    category: engineering
+    source_type: official_company_page
+    authority: primary
+    url: https://www.spacex.com/vehicles/starship/
+    published_at: unknown
+    why_it_matters: Useful for extracting views on reusability, scale, payload economics, and execution ambition.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-008
+    title: xAI company principles
+    category: reasoning_style
+    source_type: official_company_page
+    authority: primary
+    url: https://x.ai/company
+    published_at: unknown
+    why_it_matters: Contains explicit language around first principles, ambition, and speed that helps cross-check recurring patterns.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-009
+    title: TED speaker page for Elon Musk
+    category: talks_index
+    source_type: official_event_page
+    authority: primary
+    url: https://www.ted.com/speakers/elon_musk
+    published_at: unknown
+    why_it_matters: Consolidated list of major public talks useful for transcript and timestamp acquisition.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-010
+    title: TED2022 interview page
+    category: long_form_interview
+    source_type: official_event_page
+    authority: primary
+    url: https://www.ted.com/talks/elon_musk_elon_musk_talks_twitter_tesla_and_how_his_brain_works_live_at_ted2022
+    published_at: 2022-04-14
+    why_it_matters: High-value long-form interview touching worldview, crisis mode, management, and future orientation.
+    reuse_policy: store_metadata_and_summary_only
+    status: prioritized
+
+  - id: EM-011
+    title: Walter Isaacson biography publisher page
+    category: secondary_biography
+    source_type: publisher_page
+    authority: secondary
+    url: https://www.simonandschuster.com/books/Elon-Musk/Walter-Isaacson/9781982181284
+    published_at: 2023-09-12
+    why_it_matters: Important secondary synthesis for cross-checking recurring themes and sourcing follow-up interviews.
+    reuse_policy: metadata_only
+    status: supplemental
+
+  - id: EM-012
+    title: Ashlee Vance biography bibliographic page
+    category: secondary_biography
+    source_type: bibliographic_page
+    authority: secondary
+    url: https://books.google.com/books/about/Elon_Musk.html?id=Yd99BAAAQBAJ
+    published_at: 2015-05-19
+    why_it_matters: Earlier authorized-style account useful for longitudinal comparison against later portrayals.
+    reuse_policy: metadata_only
+    status: supplemental
