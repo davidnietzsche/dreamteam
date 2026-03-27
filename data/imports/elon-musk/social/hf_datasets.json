@@ -1,0 +1,9 @@
+{
+  "datasets": [
+    {
+      "dataset": "gmongaras/Elon_Tweets",
+      "config": "default",
+      "split": "train"
+    }
+  ]
+}

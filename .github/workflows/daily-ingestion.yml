@@ -24,6 +24,7 @@ jobs:
 
       - name: Run ingestion
         run: |
+          python3 -B scripts/import_elon_social_hf.py
           python3 -B scripts/ingest_elon_corpus.py
 
       - name: Commit updates

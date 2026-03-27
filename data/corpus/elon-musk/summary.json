@@ -1,7 +1,7 @@
 {
   "advisor": "elon-musk",
-  "generated_at": "2026-03-27T08:24:24.297304+00:00",
-  "total_records": 510,
+  "generated_at": "2026-03-27T10:15:10.582584+00:00",
+  "total_records": 6372,
   "by_domain_group": {
     "tesla.com": 8,
     "spacex.com": 3,
@@ -11,36 +11,34 @@
     "www.boringcompany.com": 1,
     "simonandschuster.com": 1,
     "google.com": 1,
-    "lexfridman.com": 455,
-    "youtube.com": 15,
-    "www.elon.edu": 8,
-    "connect2.elon.edu": 1,
-    "ontrack.elon.edu": 1,
-    "www.biography.com": 1,
-    "thebiographybytes.com": 1,
-    "biographyhost.com": 1,
-    "www.forbes.com": 1,
-    "atouchofbusiness.com": 1,
-    "en.wikipedia.org": 1,
-    "www.thoughtco.com": 1,
-    "technewsjunkies.com": 1,
-    "mabumbe.com": 1,
-    "www.jagranjosh.com": 1
+    "lexfridman.com": 448,
+    "x.com": 5904
   },
   "by_authority": {
-    "primary": 33,
-    "secondary": 477
+    "primary": 18,
+    "secondary": 6354
   },
   "by_source_type": {
     "official_page": 12,
     "talk_or_event_page": 4,
-    "web_page": 479,
-    "video_feed_item": 15
+    "web_page": 6356
   },
   "failures": [
     {
+      "surface_id": "lex-transcript-feed",
+      "error": "The read operation timed out"
+    },
+    {
       "surface_id": "tesla-youtube-feed",
-      "error": "HTTP Error 404: Not Found"
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "surface_id": "spacex-youtube-feed",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "surface_id": "search-discovery-layer",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
     }
   ]
 }

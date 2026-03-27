@@ -53,6 +53,7 @@ The repository now runs daily ingestion via GitHub Actions:
 Manual local run:
 
 ```bash
+python3 -B scripts/import_elon_social_hf.py
 python3 -B scripts/ingest_elon_corpus.py
 ```
 
@@ -64,6 +65,8 @@ Place `.jsonl` files in:
 - `data/imports/elon-musk/podcasts/`
 
 The ingestion pipeline will automatically include those rows in the corpus.
+
+By default, `scripts/import_elon_social_hf.py` imports Elon social posts from Hugging Face dataset configs in `data/imports/elon-musk/social/hf_datasets.json` and writes normalized rows into `data/imports/elon-musk/social/hf_social_posts.jsonl`.
 
 ## Operating Principles
 
