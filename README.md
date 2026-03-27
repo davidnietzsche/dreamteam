@@ -54,6 +54,7 @@ Manual local run:
 
 ```bash
 python3 -B scripts/import_elon_social_hf.py
+python3 -B scripts/import_elon_social_archives.py
 python3 -B scripts/ingest_elon_corpus.py
 ```
 
@@ -66,7 +67,12 @@ Place `.jsonl` files in:
 
 The ingestion pipeline will automatically include those rows in the corpus.
 
-By default, `scripts/import_elon_social_hf.py` imports Elon social posts from Hugging Face dataset configs in `data/imports/elon-musk/social/hf_datasets.json` and writes normalized rows into `data/imports/elon-musk/social/hf_social_posts.jsonl`.
+By default:
+
+- `scripts/import_elon_social_hf.py` imports from Hugging Face dataset configs in `data/imports/elon-musk/social/hf_datasets.json`.
+- `scripts/import_elon_social_archives.py` imports from external JSON archive configs in `data/imports/elon-musk/social/external_archives.json`.
+
+Both write normalized rows to `data/imports/elon-musk/social/*.jsonl`, which are picked up by the ingestion pipeline.
 
 ## Operating Principles
 

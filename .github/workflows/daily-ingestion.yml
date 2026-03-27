@@ -25,7 +25,8 @@ jobs:
       - name: Run ingestion
         run: |
           python3 -B scripts/import_elon_social_hf.py
-          python3 -B scripts/ingest_elon_corpus.py
+          python3 -B scripts/import_elon_social_archives.py
+          INGEST_SKIP_SURFACES=tesla-youtube-feed,spacex-youtube-feed,search-discovery-layer,lex-transcript-feed python3 -B scripts/ingest_elon_corpus.py
 
       - name: Commit updates
         run: |

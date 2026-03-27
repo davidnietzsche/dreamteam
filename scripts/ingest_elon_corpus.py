@@ -3,6 +3,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -20,6 +21,12 @@ SUMMARY_PATH = os.path.join(OUTPUT_DIR, "summary.json")
 
 USER_AGENT = "Mozilla/5.0 (compatible; ElonMuskPixel/0.1; +https://localhost)"
 REQUEST_TIMEOUT = 12
+RETRY_ATTEMPTS = 3
+SKIP_SURFACES = {
+    item.strip()
+    for item in os.environ.get("INGEST_SKIP_SURFACES", "").split(",")
+    if item.strip()
+}
 
 
 class TitleParser(HTMLParser):
@@ -50,10 +57,18 @@ def ensure_output_dir():
 
 
 def fetch_text(url):
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
-        charset = response.headers.get_content_charset() or "utf-8"
-        return response.read().decode(charset, errors="replace")
+    last_error = None
+    for attempt in range(RETRY_ATTEMPTS):
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
+                charset = response.headers.get_content_charset() or "utf-8"
+                return response.read().decode(charset, errors="replace")
+        except Exception as exc:
+            last_error = exc
+            if attempt < RETRY_ATTEMPTS - 1:
+                time.sleep(2 ** attempt)
+    raise last_error
 
 
 def safe_slug(url):
@@ -402,6 +417,9 @@ def main():
     failures = []
 
     for surface in manifest["surfaces"]:
+        if surface["id"] in SKIP_SURFACES:
+            print(f"[skip] {surface['id']}: configured skip")
+            continue
         try:
             records = ingest_surface(surface)
             all_records.extend(records)
