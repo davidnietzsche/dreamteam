@@ -7,134 +7,128 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="noise"></div>
-    <header class="hero shell">
-      <div class="hero-copy">
-        <p class="eyebrow">Advisor Foundry / Experimental Build 01</p>
-        <h1>Elon Musk Pixel</h1>
+    <div class="grain"></div>
+    <header class="shell hero">
+      <div class="hero-left">
+        <p class="eyebrow">Elon Pixel</p>
+        <h1>Hire Elon’s Brain, Not Just His Quotes</h1>
         <p class="lede">
-          A source-grounded strategic advisor interface that exposes the memory
-          design, training stack, and knowledge base behind an Elon-inspired
-          company advisor.
+          Clean interface. One goal: help you think in Elon-style strategic logic with traceable evidence.
         </p>
-        <div class="hero-actions">
-          <a href="#memory" class="button primary">Open Memory Map</a>
-          <a href="#knowledge-base" class="button secondary">Browse Sources</a>
+        <div class="hero-chips">
+          <span id="chip-corpus" class="chip">Corpus: --</span>
+          <span id="chip-social" class="chip">X posts: --</span>
+          <span id="chip-readiness" class="chip">Readiness: --</span>
         </div>
       </div>
-      <div class="hero-panel">
-        <div class="signal-card">
-          <span class="signal-label">Mission Core</span>
-          <strong>First principles. Massive ambition. Bottleneck obsession.</strong>
-        </div>
-        <div class="stats-grid" id="stats-grid"></div>
+      <div class="hero-image-wrap">
+        <img src="/assets/elon-hero.jpg" alt="Stylized Elon portrait" class="hero-image" />
       </div>
     </header>
 
     <main class="shell">
-      <section id="memory" class="section">
+      <section id="how" class="section">
         <div class="section-head">
-          <p class="eyebrow">Memory</p>
-          <h2>How Elon Musk Pixel stores judgment</h2>
+          <p class="eyebrow">How To Use</p>
+          <h2>Three Steps</h2>
+        </div>
+        <div class="use-grid">
+          <article class="use-card">
+            <p class="use-step">1</p>
+            <h3>Drop Your Real Problem</h3>
+            <p>Describe your bottleneck with numbers, constraints, and timeline.</p>
+          </article>
+          <article class="use-card">
+            <p class="use-step">2</p>
+            <h3>Chat With Elon Pixel</h3>
+            <p>Get first-principles advice with tradeoffs and execution pressure.</p>
+          </article>
+          <article class="use-card">
+            <p class="use-step">3</p>
+            <h3>Pick Elon's Brain</h3>
+            <p>Use the mind wiring map to challenge assumptions before you act.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="connect" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Connect My Business</p>
+          <h2>Plug In Your Company Once</h2>
           <p>
-            This is not a style clone. The memory system breaks recurring
-            patterns into reusable decision layers.
+            Connect Notion, website, company folder, and finance files so Elon Pixel can judge with context.
           </p>
         </div>
-        <div class="memory-grid" id="memory-grid"></div>
+        <div class="connect-grid">
+          <form id="connect-form" class="connect-card">
+            <label>Company Name</label>
+            <input id="company-name" type="text" placeholder="Acme Robotics" />
+            <label>Notion URL</label>
+            <input id="notion-url" type="url" placeholder="https://www.notion.so/..." />
+            <label>Website URL</label>
+            <input id="website-url" type="url" placeholder="https://yourcompany.com" />
+            <label>Company Folder Path</label>
+            <input id="folder-path" type="text" placeholder="/Users/you/CompanyBrain" />
+            <label>Notes</label>
+            <textarea id="company-notes" placeholder="Optional context, goals, constraints"></textarea>
+            <button type="submit" class="button primary">Connect My Business</button>
+          </form>
+
+          <div class="connect-card">
+            <h3>Finance Upload</h3>
+            <p class="muted">Upload CSV/TXT/JSON and Elon Pixel will include it in judgment.</p>
+            <input id="finance-file" type="file" />
+            <button id="upload-finance-btn" class="button primary" type="button">Upload Finance</button>
+            <p id="connect-status" class="muted">Status: waiting for connection</p>
+            <div class="connect-actions">
+              <button id="generate-todos-btn" class="button primary" type="button">Generate To-Do</button>
+              <button id="download-report-btn" class="button primary" type="button">Download Report</button>
+            </div>
+            <div id="todo-box" class="todo-box"></div>
+          </div>
+        </div>
       </section>
 
-      <section id="training" class="section">
+      <section id="chat" class="section">
         <div class="section-head">
-          <p class="eyebrow">Training Stack</p>
-          <h2>How this advisor is built</h2>
-          <p>
-            The current build is source-grounded rather than a custom model
-            fine-tune. The stack is designed so you can later add ingestion,
-            retrieval, evals, and multi-advisor comparisons.
-          </p>
+          <p class="eyebrow">Chat With Elon</p>
+          <h2>Talk To The Advisor</h2>
+          <p>Ask strategy, execution, hiring, manufacturing, or scaling questions.</p>
         </div>
-        <div class="timeline" id="timeline"></div>
+        <div class="chat-shell">
+          <div class="chat-log" id="chat-log">
+            <article class="chat-msg assistant">
+              <p class="chat-role">Elon Pixel</p>
+              <p>Give me your hardest company constraint. I will go bottleneck-first.</p>
+            </article>
+          </div>
+          <form id="chat-form" class="chat-form">
+            <textarea id="chat-input" placeholder="Example: Revenue is growing but gross margin keeps dropping. What should I fix first?" required></textarea>
+            <button type="submit" class="button primary">Send</button>
+          </form>
+        </div>
       </section>
 
-      <section id="readiness" class="section">
+      <section id="brain" class="section">
         <div class="section-head">
-          <p class="eyebrow">Consultant Readiness</p>
-          <h2>How close this is to decision-grade Elon consulting</h2>
-          <p>
-            This scorecard tracks depth, benchmarks, contradiction handling,
-            red-team quality, and long-form reasoning balance.
-          </p>
+          <p class="eyebrow">Pick Elon's Brain</p>
+          <h2>Mind Wiring</h2>
+          <p>Layered map of mindset, ideology, experience, and decision behavior.</p>
         </div>
-        <div class="readiness-shell">
-          <div class="readiness-main">
-            <p class="readiness-score" id="readiness-score">--</p>
-            <p class="readiness-band" id="readiness-band">Loading...</p>
-            <p class="readiness-note" id="readiness-note"></p>
-          </div>
-          <div class="readiness-grid" id="readiness-grid"></div>
-        </div>
-      </section>
-
-      <section id="knowledge-base" class="section">
-        <div class="section-head">
-          <p class="eyebrow">Knowledge Base</p>
-          <h2>What the advisor learns from</h2>
-          <p>
-            Each entry is a source object, not raw scraped copyright-heavy text.
-            That keeps the public repo clean and easier to scale.
-          </p>
-        </div>
-        <div class="kb-toolbar">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="primary">Primary</button>
-          <button class="filter" data-filter="secondary">Secondary</button>
-        </div>
-        <div class="kb-grid" id="kb-grid"></div>
-      </section>
-
-      <section id="advisor-output" class="section dual">
-        <div>
-          <div class="section-head left">
-            <p class="eyebrow">Response Logic</p>
-            <h2>Answer structure</h2>
-          </div>
-          <ol class="answer-steps" id="answer-steps"></ol>
-        </div>
-        <div>
-          <div class="section-head left">
-            <p class="eyebrow">Demo Prompt</p>
-            <h2>What a user would ask</h2>
-          </div>
-          <div class="prompt-card">
-            <p class="prompt-label">Scenario</p>
-            <p id="demo-prompt"></p>
-            <p class="prompt-label">Expected advisor posture</p>
-            <p id="demo-answer-style"></p>
-          </div>
-        </div>
-      </section>
-
-      <section id="repo" class="section">
-        <div class="section-head">
-          <p class="eyebrow">Repository Shape</p>
-          <h2>What ships to GitHub</h2>
-        </div>
-        <div class="repo-grid">
-          <div class="repo-card">
-            <h3>Public</h3>
-            <ul id="public-list"></ul>
-          </div>
-          <div class="repo-card">
-            <h3>Private or licensed later</h3>
-            <ul id="private-list"></ul>
+        <div class="brain-grid">
+          <div class="brain-map" id="brain-map"></div>
+          <div class="brain-panel">
+            <h3>Knowledge Pulse</h3>
+            <ul id="knowledge-pulse"></ul>
+            <h3>Consultant Readiness</h3>
+            <p id="readiness-line">Loading...</p>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="shell footer">
-      <p>Built locally for rapid iteration. Port: 9999</p>
+      <p>Elon Pixel local build · Port 9999</p>
     </footer>
 
     <script src="/app.js"></script>
